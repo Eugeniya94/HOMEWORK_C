@@ -11,7 +11,7 @@ int firstnum = number/100;
 int count = 0;
 string Endnumber(int num)
 {
-    while(num > 100 && num < 1000)
+    while(num > 100 && num < 999)
     {
      num = num/100;
      count++;

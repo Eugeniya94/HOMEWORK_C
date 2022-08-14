@@ -13,7 +13,7 @@ int number = Convert.ToInt32(Console.ReadLine());
                 
             Console.WriteLine("Сегодня выходной");
             }
-            else Console.WriteLine("Сегодня рабочий день");
+            else Console.WriteLine("Сегодня не выходной день");
             }
     else {
             Console.WriteLine("Не верное число");
