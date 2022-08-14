@@ -8,12 +8,13 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 int firstnum = number/100;
-
+int count = 0;
 string Endnumber(int num)
 {
-    while(num>=100 && num<=999)
+    while(num > 100 && num < 1000)
     {
-        int firstnum = num/100;
+     num = num/100;
+     count++;
     }
         if(firstnum % 100 == 0) return "Третьей цифры нет.";
         
