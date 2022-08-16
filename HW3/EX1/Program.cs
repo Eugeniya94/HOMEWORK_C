@@ -11,7 +11,6 @@ if (NUM < 10000 || NUM > 99999)
 }
 else
 {
-
     bool Palindrom(int num)
     {
         return num / 10000 == num % 10 && ((num / 1000) % 10) == ((num % 100) / 10);
