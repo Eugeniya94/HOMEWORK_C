@@ -11,8 +11,14 @@ int numberB = Convert.ToInt32(Console.ReadLine());
 
 int resnum = numberA;
 
-for (int i = 1; i < numberB; i++)
+int Pownum(int numA, int numB)
 {
-    resnum = resnum * numberA;
+    for (int i = 1; i < numB; i++)
+    {
+        resnum = resnum * numA;
+    }
+    return resnum;
 }
-Console.WriteLine($"Число {numberA}, возведенное в степерь {numberB} равно {resnum}");
+
+int res = Pownum(numberA, numberB);
+Console.WriteLine($"Число {numberA}, возведенное в степерь {numberB} равно {res}");
