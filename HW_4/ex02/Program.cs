@@ -7,12 +7,18 @@ Console.Write("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int sum = 0;
 
-while (number > 0)
+int SumNumbers(int num)
 {
-    int num = number % 10;
-    sum = sum + num;
-    number = number / 10;
+    while (num > 0)
+    {
+        int num1 = num % 10;
+        sum = sum + num1;
+        num = num / 10;
+    }
+    return sum;
 }
-Console.Write($"Сумма всех цифр в числе равна {sum}");
+
+int result = SumNumbers(number);
+Console.Write($"Сумма всех цифр в числе равна {result}");
 
 

@@ -6,7 +6,7 @@
 Console.Write("Введите 2 числа. Первое число: ");
 int numberA = Convert.ToInt32(Console.ReadLine());
 
-Console.Write("Введите 2 числа. Второе число: ");
+Console.Write("Второе число: ");
 int numberB = Convert.ToInt32(Console.ReadLine());
 
 int resnum = numberA;
