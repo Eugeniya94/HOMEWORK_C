@@ -12,7 +12,7 @@ void InpNumbers(int num)
 {
 for (int i = 0; i < num; i++)
   {
-    Console.Write($"Введите {i+1} число: ");
+    Console.Write($"Введите число №{i+1}: ");
     arrayNumbers[i] = Convert.ToInt32(Console.ReadLine());
   }
 }
