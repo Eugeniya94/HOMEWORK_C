@@ -20,7 +20,7 @@ string FindPosElem(int[,] matrix, int str, int col)
 {
 if (str > matrix.GetLength(0) || col > matrix.GetLength(1))
 {
-    Console.WriteLine("Такого элемента нет");
+    Console.WriteLine("В заданной позиции элемент отсутствует");
 }
 
     return ($"значение элемента {str} строки и {col} столбца равно {matrix[str-1,col-1]}");
