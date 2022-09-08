@@ -10,10 +10,11 @@
 
 int[,] matr = CreateMatrixRndInt(3,4,1,10);
 PrintMatrix(matr);
-Console.WriteLine(AverageInCol(matr) + ";");
+double[] aver = AverageInCol(matr);
+Console.WriteLine(aver);
 
 
-double AverageInCol(int[,]matrix)
+double[] AverageInCol(int[,]matrix)
 {
      double avarage = 0;
 for (int i = 0; i < matrix.GetLength(0); i++)
@@ -25,7 +26,7 @@ for (int i = 0; i < matrix.GetLength(0); i++)
     }
     avarage = avarage / matrix.GetLength(1);
 }
-return avarage;
+return new double[]{avarage};
 }
 
 int[,] CreateMatrixRndInt(int row, int col, int min, int max)
