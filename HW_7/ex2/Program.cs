@@ -53,7 +53,7 @@ void PrintMatrix(int[,] matrix)
         Console.Write("[");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            if (i < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4},");// добавили отступ 4
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 4},");// добавили отступ 4
             else Console.Write($"{matrix[i, j], 4}");
         }
         Console.WriteLine("]");

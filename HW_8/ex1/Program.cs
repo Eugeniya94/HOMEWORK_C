@@ -10,21 +10,61 @@
 // 9 5 3 2
 // 8 4 4 2
 
-void SortToLower(int[,] array)
+int[,] CreateMatrixRndInt(int row, int col, int min, int max)
 {
-    for (int i = 0; i < array.GetLength(0); i++)
+    int[,] matrix = new int[row, col];
+    Random rnd = new Random();
+
+    for (int i = 0; i < matrix.GetLength(0); i++)
     {
-        for (int j = 0; j < array.GetLength(1); j++)
+        for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int k = 0; k < array.GetLength(1) - 1; k++)
+            matrix[i, j] = rnd.Next(min, max + 1);
+        }
+
+
+    }
+    return matrix;
+}
+
+void PrintMatrix(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        Console.Write("[");
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            if (j < matrix.GetLength(1) - 1) Console.Write($"{matrix[i, j], 3},");
+            else Console.Write($"{matrix[i, j], 3}");
+        }
+        Console.WriteLine("]");
+    }
+}
+
+
+void SortToLower(int[,] matrix)
+{
+    for (int i = 0; i < matrix.GetLength(0); i++)
+    {
+        for (int j = 0; j < matrix.GetLength(1); j++)
+        {
+            for (int z = 0; z < matrix.GetLength(1) - 1; z++)
             {
-                if (array[i, k] < array[i, k + 1])
+                if (matrix[i, z] < matrix[i, z + 1])
                 {
-                    int temp = array[i, k + 1];
-                    array[i, k + 1] = array[i, k];
-                    array[i, k] = temp;
+                    int temp = matrix[i, z + 1];
+                    matrix[i, z + 1] = matrix[i, z];
+                    matrix[i, z] = temp;
                 }
             }
         }
     }
 }
+
+int[,] matr = CreateMatrixRndInt(3,4,1,10);
+PrintMatrix(matr);
+SortToLower(matr);
+Console.WriteLine();
+PrintMatrix(matr);
+
+
